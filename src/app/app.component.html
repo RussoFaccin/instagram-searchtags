@@ -1,0 +1,14 @@
+<div id="app-container">
+  <h1>{{appTitle}}</h1>
+  <div id="search-tag">
+    <input type="text" name="fld_search" [(ngModel)]="searchTag" (keyup.enter)="onSearch()">
+    <button (click)="onSearch()">Search</button>
+  </div>
+    <ul id="search-result">
+      <li *ngFor="let item of data">
+        <a href="https://www.instagram.com/p/{{item.node.shortcode}}">
+          <img src="{{item.node.thumbnail_src}}" alt=""/>
+        </a>
+      </li>
+    </ul>
+</div>
