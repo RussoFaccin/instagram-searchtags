@@ -14,7 +14,6 @@ export class AppComponent {
     fetch(apiUrl).then(response => {
       response.json().then(data => {
         this.data = data.graphql.hashtag.edge_hashtag_to_media.edges;
-        console.log(data.graphql.hashtag.edge_hashtag_to_media.edges);
       });
     });
   }
